@@ -1,0 +1,37 @@
+.navBar {
+    display: flex;
+    align-items: center;
+    /*margin-bottom: 2rem;*/
+
+    grid-area: header;
+}
+
+.navBar__left {
+    flex-grow: 1;
+}
+
+.navBar__right{
+    flex-grow: 7;
+}
+
+.ulList {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 26rem;
+    list-style: none;
+}
+
+.ulList__item {
+
+}
+
+.ulList__name {
+    color: #00bc8c;
+}
+
+.logoName {
+    color: #ffffff;
+    font-size: 2rem;
+}
+

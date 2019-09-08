@@ -1,0 +1,30 @@
+.random-planet {
+    grid-area: randomPlanet;
+}
+.card-block {
+    flex-direction: row;
+    padding: 15px 10px;
+
+}
+
+.card__left {
+    margin-right: 1.5rem;
+}
+
+.card__left img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+.card-title-block {
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+}
+
+.list-group-block {
+    font-size: .89rem;
+}
+.list-group-item .term {
+    margin-right: 10px;
+}

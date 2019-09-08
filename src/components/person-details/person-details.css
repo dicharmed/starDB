@@ -1,0 +1,11 @@
+.personDetails {
+    grid-area: personDetails;
+}
+.card-person {
+    flex-grow: 1;
+}
+
+.card-title-block-person {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}

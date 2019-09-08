@@ -1,0 +1,31 @@
+.appWrapper {
+    display: grid;
+    /*grid-template-columns: 1fr;*/
+    justify-content: center;
+    grid-row-gap: 2rem;
+    grid-column-gap: 2rem;
+    padding: 2% 10%;
+
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+
+    grid-template-areas: "header header"
+    "randomPlanet randomPlanet"
+    "itemList personDetails";
+}
+
+@media screen and (max-width: 1050px) {
+    .appWrapper {
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+
+        grid-template-areas: "header"
+        "randomPlanet"
+        "itemList"
+        "personDetails";
+    }
+
+}
