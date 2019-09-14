@@ -1,11 +1,26 @@
 .personDetails {
     grid-area: personDetails;
+    max-height: 230px;
+}
+.personDetails .card__left img {
+    width: 160px;
 }
 .card-person {
     flex-grow: 1;
+
 }
 
 .card-title-block-person {
     margin-bottom: 1rem;
     font-size: 1.4rem;
+}
+
+.list-group-desc {
+    margin-left: 8px;
+}
+
+.msg {
+    text-align: center;
+    font-size: 20pt;
+
 }

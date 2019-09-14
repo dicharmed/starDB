@@ -12,7 +12,12 @@
 
     grid-template-areas: "header header"
     "randomPlanet randomPlanet"
+    "toggleButton toggleButton"
     "itemList personDetails";
+}
+
+.toggleBtn {
+    grid-area: toggleButton;
 }
 
 @media screen and (max-width: 1050px) {
@@ -24,6 +29,7 @@
 
         grid-template-areas: "header"
         "randomPlanet"
+        "toggleButton"
         "itemList"
         "personDetails";
     }
