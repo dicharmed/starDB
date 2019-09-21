@@ -1,19 +1,23 @@
 import React, {Component} from 'react';
-import s from './app.module.css';
+import './app.css';
 
 
 import Header from '../header';
-import ItemList from "../item-list";
-import PersonDetails from "../person-details";
-import PlanetDetails from "../planet-details";
 import RandomPlanet from "../random-planet";
-import StarshipDetails from "../starship-details";
+import SwapiService from "../../services/swapi-service";
+import ErrorButton from "../error-button/ErrorButton";
+import ErrorBoundry from "../error-boundry/ErrorBoundry";
+
+import PeoplePage from '../people-page'
 
 
 export default class App extends Component{
+
+    swapiService = new SwapiService();
+
     state = {
         showRandomPlanet: true,
-        selectedPerson: null
+        hasError: false
     }
 
     toggleRandomPlanet = () => {
@@ -21,28 +25,29 @@ export default class App extends Component{
             showRandomPlanet: !this.state.showRandomPlanet
         })
     }
-    onPersonSelected = (id) => {
-        this.setState({
-            selectedPerson: id
-        })
+
+    componentDidCatch() {
+        this.setState({hasError: true});
     }
 
     render(){
         const planet = this.state.showRandomPlanet ? <RandomPlanet/> : null;
 
         return(
-            <div className={s.appWrapper}>
-                <Header/>
+            <ErrorBoundry>
+                <div className="appWrapper">
+                    <Header/>
+                    {planet}
+                    <button type="button" className="btn btn-warning btn-lg toggleBtn" onClick={this.toggleRandomPlanet}>Toggle Random Planet</button>
 
-                {planet}
+                    <ErrorButton/>
 
-                <button type="button" className="btn btn-warning btn-lg toggleBtn" onClick={this.toggleRandomPlanet}>Toggle Random Planet</button>
 
-                <ItemList onItemSelected={this.onPersonSelected}/>
-                <PersonDetails personId={this.state.selectedPerson}/>
-                {/*<PlanetDetails/>*/}
-                {/*<StarshipDetails/>*/}
-            </div>
+                    <PeoplePage/>
+                    {/*<PlanetsPage/>*/}
+                    {/*<StarshipsPage/>*/}
+                </div>
+            </ErrorBoundry>
         )
     }
 

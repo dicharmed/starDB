@@ -1,0 +1,24 @@
+.appWrapper {
+    padding: 2% 10%;
+}
+
+.toggleBtn {
+    /*margin-top: 2rem;*/
+    /*margin-bottom: 2rem;*/
+    margin: 2rem 2rem 2rem 0;
+}
+
+@media screen and (max-width: 580px) {
+    .card-block {
+        flex-direction: column!important;
+    }
+
+    .card-title{
+        margin-top: 1rem;
+        margin-bottom: 1rem!important;
+    }
+
+    .personDetails {
+        max-height: none!important;
+    }
+}

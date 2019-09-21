@@ -1,3 +1,24 @@
 .itemList {
     grid-area: itemList;
 }
+
+.block-items {
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-areas: "itemList personDetails";
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1050px) {
+    .block-items {
+        display: grid;
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+        grid-template-areas: "itemList"
+        "personDetails";
+    }
+
+}
+
